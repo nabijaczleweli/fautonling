@@ -4,7 +4,9 @@
 !src
 !src/**
 !schematic
-!schematic/**
+!schematic/fautonling-schematic-cache.lib
+!schematic/fautonling-schematic.pro
+!schematic/fautonling-schematic.sch
 !.git*
 !*.yml
 !*Makefile
