@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:fautonling-schematic-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -14,204 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_Microchip_ATtiny:ATtiny13A-SU U2
-U 1 1 5BF5A839
-P 2200 3800
-F 0 "U2" H 1670 3846 50  0000 R CNN
-F 1 "ATtiny13A-SU" H 1670 3755 50  0000 R CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 2200 3800 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc8126.pdf" H 2200 3800 50  0001 C CNN
-	1    2200 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Regulator_Linear:L78L05_TO92 U1
-U 1 1 5BF5AB2A
-P 2200 1600
-F 0 "U1" H 2200 1842 50  0000 C CNN
-F 1 "L78L05_TO92" H 2200 1751 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2200 1825 50  0001 C CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 2200 1550 50  0001 C CNN
-	1    2200 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+12V #PWR?
-U 1 1 5BF5ABD0
-P 1000 1600
-F 0 "#PWR?" H 1000 1450 50  0001 C CNN
-F 1 "+12V" V 1015 1728 50  0000 L CNN
-F 2 "" H 1000 1600 50  0001 C CNN
-F 3 "" H 1000 1600 50  0001 C CNN
-	1    1000 1600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C1
-U 1 1 5BF5AC35
-P 1400 1750
-F 0 "C1" H 1285 1704 50  0000 R CNN
-F 1 "370-470nF" H 1285 1795 50  0000 R CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 1438 1600 50  0001 C CNN
-F 3 "~" H 1400 1750 50  0001 C CNN
-	1    1400 1750
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5BF5AD95
-P 2200 1900
-F 0 "#PWR?" H 2200 1650 50  0001 C CNN
-F 1 "GND" H 2205 1727 50  0000 C CNN
-F 2 "" H 2200 1900 50  0001 C CNN
-F 3 "" H 2200 1900 50  0001 C CNN
-	1    2200 1900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 1900 1400 1900
-Connection ~ 2200 1900
-$Comp
-L Device:C C4
-U 1 1 5BF5AE04
-P 2500 1750
-F 0 "C4" H 2615 1796 50  0000 L CNN
-F 1 "33μF" H 2615 1705 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_Tantal_D4.5mm_P2.50mm" H 2538 1600 50  0001 C CNN
-F 3 "~" H 2500 1750 50  0001 C CNN
-	1    2500 1750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 1900 2500 1900
-$Comp
-L power:+5V #PWR?
-U 1 1 5BF5AEDA
-P 2900 1600
-F 0 "#PWR?" H 2900 1450 50  0001 C CNN
-F 1 "+5V" V 2915 1728 50  0000 L CNN
-F 2 "" H 2900 1600 50  0001 C CNN
-F 3 "" H 2900 1600 50  0001 C CNN
-	1    2900 1600
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2900 1600 2500 1600
-Connection ~ 2500 1600
-Wire Wire Line
-	1400 1600 1900 1600
-$Comp
-L Device:LED_RABG D1
-U 1 1 5BF5B0EE
-P 9000 1050
-F 0 "D1" H 9000 1547 50  0000 C CNN
-F 1 "LED_RABG" H 9000 1456 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm-4" H 9000 1000 50  0001 C CNN
-F 3 "~" H 9000 1000 50  0001 C CNN
-	1    9000 1050
-	0    1    -1   0   
-$EndComp
-Wire Wire Line
-	1400 1600 1000 1600
-Connection ~ 1400 1600
-$Comp
-L power:+5V #PWR?
-U 1 1 5BF5B87E
-P 2200 2900
-F 0 "#PWR?" H 2200 2750 50  0001 C CNN
-F 1 "+5V" H 2215 3073 50  0000 C CNN
-F 2 "" H 2200 2900 50  0001 C CNN
-F 3 "" H 2200 2900 50  0001 C CNN
-	1    2200 2900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C2
-U 1 1 5BF5B983
-P 1800 3050
-F 0 "C2" V 2052 3050 50  0000 C CNN
-F 1 "100nF" V 1961 3050 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 1838 2900 50  0001 C CNN
-F 3 "~" H 1800 3050 50  0001 C CNN
-	1    1800 3050
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5BF5BB03
-P 1650 3050
-F 0 "#PWR?" H 1650 2800 50  0001 C CNN
-F 1 "GND" V 1655 2922 50  0000 R CNN
-F 2 "" H 1650 3050 50  0001 C CNN
-F 3 "" H 1650 3050 50  0001 C CNN
-	1    1650 3050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2200 3200 2200 3050
-Wire Wire Line
-	1950 3050 2200 3050
-Connection ~ 2200 3050
-Text Notes 1550 3250 0    50   ~ 0
-Close to body
-Wire Wire Line
-	2200 2900 2200 3050
-$Comp
-L power:GND #PWR?
-U 1 1 5BF5C87F
-P 2200 4400
-F 0 "#PWR?" H 2200 4150 50  0001 C CNN
-F 1 "GND" H 2205 4227 50  0000 C CNN
-F 2 "" H 2200 4400 50  0001 C CNN
-F 3 "" H 2200 4400 50  0001 C CNN
-	1    2200 4400
-	1    0    0    -1  
-$EndComp
-NoConn ~ 2800 4000
-$Comp
-L Device:R_Variable R1
-U 1 1 5BF5D3BA
-P 8200 1550
-F 0 "R1" H 8328 1596 50  0000 L CNN
-F 1 "5000R" H 8328 1505 50  0000 L CNN
-F 2 "" V 8130 1550 50  0001 C CNN
-F 3 "~" H 8200 1550 50  0001 C CNN
-	1    8200 1550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Variable R2
-U 1 1 5BF5D5C8
-P 9000 1550
-F 0 "R2" H 9128 1596 50  0000 L CNN
-F 1 "5000R" H 9128 1505 50  0000 L CNN
-F 2 "" V 8930 1550 50  0001 C CNN
-F 3 "~" H 9000 1550 50  0001 C CNN
-	1    9000 1550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Variable R3
-U 1 1 5BF5D649
-P 9800 1550
-F 0 "R3" H 9928 1596 50  0000 L CNN
-F 1 "5000R" H 9928 1505 50  0000 L CNN
-F 2 "" V 9730 1550 50  0001 C CNN
-F 3 "~" H 9800 1550 50  0001 C CNN
-	1    9800 1550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8800 1250 8800 1400
-Wire Wire Line
-	8800 1400 8200 1400
-Wire Wire Line
-	9200 1250 9200 1400
-Wire Wire Line
-	9200 1400 9800 1400
-Wire Wire Line
-	9000 1250 9000 1400
-$Comp
 L Transistor_FET:IRFZ44N Q1
 U 1 1 5BF5E604
 P 4350 3000
@@ -222,76 +25,6 @@ F 3 "https://www.mouser.com/catalog/specsheets/irfz44n.pdf" H 4350 3000 50  0001
 	1    4350 3000
 	1    0    0    -1  
 $EndComp
-$Comp
-L Sensor_Temperature:LM35-LP U3
-U 1 1 5BF5F6DD
-P 2200 5900
-F 0 "U3" H 1870 5946 50  0000 R CNN
-F 1 "LM35-LP" H 1870 5855 50  0000 R CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2250 5650 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm35.pdf" H 2200 5900 50  0001 C CNN
-	1    2200 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5BF5FAC1
-P 2200 6200
-F 0 "#PWR?" H 2200 5950 50  0001 C CNN
-F 1 "GND" H 2205 6027 50  0000 C CNN
-F 2 "" H 2200 6200 50  0001 C CNN
-F 3 "" H 2200 6200 50  0001 C CNN
-	1    2200 6200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5BF60120
-P 2200 5300
-F 0 "#PWR?" H 2200 5150 50  0001 C CNN
-F 1 "+5V" H 2215 5473 50  0000 C CNN
-F 2 "" H 2200 5300 50  0001 C CNN
-F 3 "" H 2200 5300 50  0001 C CNN
-	1    2200 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C3
-U 1 1 5BF60126
-P 1800 5450
-F 0 "C3" V 2052 5450 50  0000 C CNN
-F 1 "100nF" V 1961 5450 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 1838 5300 50  0001 C CNN
-F 3 "~" H 1800 5450 50  0001 C CNN
-	1    1800 5450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5BF6012D
-P 1650 5450
-F 0 "#PWR?" H 1650 5200 50  0001 C CNN
-F 1 "GND" V 1655 5322 50  0000 R CNN
-F 2 "" H 1650 5450 50  0001 C CNN
-F 3 "" H 1650 5450 50  0001 C CNN
-	1    1650 5450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2200 5600 2200 5450
-Wire Wire Line
-	1950 5450 2200 5450
-Connection ~ 2200 5450
-Text Notes 1550 5650 0    50   ~ 0
-Close to body
-Wire Wire Line
-	2200 5300 2200 5450
-Wire Wire Line
-	2800 3900 2950 3900
-Wire Wire Line
-	2950 3900 2950 5900
-Wire Wire Line
-	2950 5900 2600 5900
 $Comp
 L power:+12V #PWR?
 U 1 1 5BF6D7B8
@@ -314,10 +47,6 @@ F 3 "" H 4450 3200 50  0001 C CNN
 	1    4450 3200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4150 3000 4150 3500
-Wire Wire Line
-	4150 3500 2800 3500
 $Comp
 L Motor:Fan_3pin M1
 U 1 1 5BFF0DBA
@@ -346,71 +75,23 @@ Connection ~ 4450 2300
 Wire Wire Line
 	4450 2800 5650 2800
 Connection ~ 4450 2800
-Wire Wire Line
-	5350 2500 5200 2500
-Wire Wire Line
-	5200 2500 5200 2000
-Wire Wire Line
-	3950 2500 3950 1850
-Wire Wire Line
-	2800 3600 9150 3600
-Wire Wire Line
-	9000 1700 9000 2000
-Wire Wire Line
-	8200 1700 8200 1850
-Wire Wire Line
-	3950 2500 4150 2500
-$Comp
-L Device:D_Schottky D2
-U 1 1 5C0057E7
-P 7800 1850
-F 0 "D2" H 7800 2066 50  0000 C CNN
-F 1 "1N5819" H 7800 1975 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" H 7800 1850 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/ds23001.pdf" H 7800 1850 50  0001 C CNN
-	1    7800 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Schottky D3
-U 1 1 5C0073B0
-P 8600 2000
-F 0 "D3" H 8600 2216 50  0000 C CNN
-F 1 "1N5819" H 8600 2125 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" H 8600 2000 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/ds23001.pdf" H 8600 2000 50  0001 C CNN
-	1    8600 2000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5200 2000 8450 2000
-Wire Wire Line
-	9000 2000 8750 2000
-Wire Wire Line
-	7950 1850 8200 1850
-Wire Wire Line
-	3950 1850 7650 1850
 Connection ~ 5650 2800
 Connection ~ 5650 2300
 Wire Wire Line
 	5650 2800 6650 2800
-Wire Wire Line
-	6650 2800 7100 2800
 Connection ~ 6650 2800
 Wire Wire Line
 	6650 2800 6650 2700
 Wire Wire Line
 	5650 2300 6650 2300
-Wire Wire Line
-	6650 2300 7100 2300
 Connection ~ 6650 2300
 Wire Wire Line
 	6650 2400 6650 2300
 $Comp
-L Device:C C5
+L Device:C C1
 U 1 1 5BF71A4B
 P 6650 2550
-F 0 "C5" H 6765 2596 50  0000 L CNN
+F 0 "C1" H 6765 2596 50  0000 L CNN
 F 1 "100nF" H 6765 2505 50  0000 L CNN
 F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 6688 2400 50  0001 C CNN
 F 3 "~" H 6650 2550 50  0001 C CNN
@@ -418,93 +99,222 @@ F 3 "~" H 6650 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7100 2400 7100 2300
-Wire Wire Line
-	7100 2700 7100 2800
+	7350 2700 7350 2800
 $Comp
-L Device:D_Schottky D4
-U 1 1 5BF6F6C7
-P 7100 2550
-F 0 "D4" V 7146 2471 50  0000 R CNN
-F 1 "1N5819" V 7055 2471 50  0000 R CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" H 7100 2550 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/ds23001.pdf" H 7100 2550 50  0001 C CNN
-	1    7100 2550
-	0    -1   -1   0   
+L Device:LM335Z U1
+U 1 1 5DA23376
+P 1500 1100
+F 0 "U1" H 1300 1021 50  0000 R CNN
+F 1 "LM335Z" H 1300 930 50  0000 R CNN
+F 2 "" V 1700 970 50  0001 C CNN
+F 3 "" V 1700 970 50  0001 C CNN
+	1    1500 1100
+	1    0    0    -1  
 $EndComp
-Text Notes 6050 3050 0    50   ~ 0
-Does this puny "snubber network" for 3A total of fan?
 $Comp
 L power:+12V #PWR?
-U 1 1 5C011846
-P 9000 850
-F 0 "#PWR?" H 9000 700 50  0001 C CNN
-F 1 "+12V" V 9015 978 50  0000 L CNN
-F 2 "" H 9000 850 50  0001 C CNN
-F 3 "" H 9000 850 50  0001 C CNN
-	1    9000 850 
+U 1 1 5DA23642
+P 1500 750
+F 0 "#PWR?" H 1500 600 50  0001 C CNN
+F 1 "+12V" H 1515 923 50  0000 C CNN
+F 2 "" H 1500 750 50  0001 C CNN
+F 3 "" H 1500 750 50  0001 C CNN
+	1    1500 750 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_BJT:BC337 Q2
-U 1 1 5C012DF0
-P 9700 3900
-F 0 "Q2" H 9891 3946 50  0000 L CNN
-F 1 "BC337" H 9891 3855 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9900 3825 50  0001 L CIN
-F 3 "http://www.nxp.com/documents/data_sheet/BC817_BC817W_BC337.pdf" H 9700 3900 50  0001 L CNN
-	1    9700 3900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5C014109
-P 9150 3750
-F 0 "R4" H 9220 3796 50  0000 L CNN
-F 1 "2200R" H 9220 3705 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 9080 3750 50  0001 C CNN
-F 3 "~" H 9150 3750 50  0001 C CNN
-	1    9150 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 5C0144C7
-P 9150 4050
-F 0 "R5" H 9220 4096 50  0000 L CNN
-F 1 "4700R" H 9220 4005 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 9080 4050 50  0001 C CNN
-F 3 "~" H 9150 4050 50  0001 C CNN
-	1    9150 4050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9150 3900 9500 3900
-Connection ~ 9150 3900
-Wire Wire Line
-	9800 1700 9800 3700
-$Comp
-L power:GND #PWR?
-U 1 1 5C018A27
-P 9150 4200
-F 0 "#PWR?" H 9150 3950 50  0001 C CNN
-F 1 "GND" H 9155 4027 50  0000 C CNN
-F 2 "" H 9150 4200 50  0001 C CNN
-F 3 "" H 9150 4200 50  0001 C CNN
-	1    9150 4200
+L Device:R R1
+U 1 1 5DA2372A
+P 1500 900
+F 0 "R1" H 1570 946 50  0000 L CNN
+F 1 "4700R" H 1570 855 50  0000 L CNN
+F 2 "" V 1430 900 50  0001 C CNN
+F 3 "~" H 1500 900 50  0001 C CNN
+	1    1500 900 
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
-U 1 1 5C01918C
-P 9800 4200
-F 0 "#PWR?" H 9800 3950 50  0001 C CNN
-F 1 "GND" H 9805 4027 50  0000 C CNN
-F 2 "" H 9800 4200 50  0001 C CNN
-F 3 "" H 9800 4200 50  0001 C CNN
-	1    9800 4200
+U 1 1 5DA23864
+P 1500 1400
+F 0 "#PWR?" H 1500 1150 50  0001 C CNN
+F 1 "GND" H 1505 1227 50  0000 C CNN
+F 2 "" H 1500 1400 50  0001 C CNN
+F 3 "" H 1500 1400 50  0001 C CNN
+	1    1500 1400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1700 1250
+Wire Wire Line
+	1500 1050 3000 1050
+Wire Wire Line
+	3000 1050 3000 2900
+Connection ~ 1500 1050
+$Comp
+L Device:R R2
+U 1 1 5DA2407D
+P 7850 2450
+F 0 "R2" H 7920 2496 50  0000 L CNN
+F 1 "4700R" H 7920 2405 50  0000 L CNN
+F 2 "" V 7780 2450 50  0001 C CNN
+F 3 "~" H 7850 2450 50  0001 C CNN
+	1    7850 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5DA24162
+P 7850 2750
+F 0 "D2" V 7888 2633 50  0000 R CNN
+F 1 "LED" V 7797 2633 50  0000 R CNN
+F 2 "" H 7850 2750 50  0001 C CNN
+F 3 "~" H 7850 2750 50  0001 C CNN
+	1    7850 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7850 2900 7350 2900
+$Comp
+L Comparator:LM339 U2
+U 1 1 5DA25B7C
+P 3650 3000
+F 0 "U2" H 3650 3367 50  0000 C CNN
+F 1 "LM339" H 3650 3276 50  0000 C CNN
+F 2 "" H 3600 3100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm339.pdf" H 3700 3200 50  0001 C CNN
+	1    3650 3000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9800 4100 9800 4200
+	3350 2900 3000 2900
+$Comp
+L Comparator:LM339 U2
+U 5 1 5DA26231
+P 1900 2650
+F 0 "U2" V 1995 2650 50  0000 C CNN
+F 1 "LM339" V 1904 2650 50  0000 C CNN
+F 2 "" H 1850 2750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm339.pdf" H 1950 2850 50  0001 C CNN
+	5    1900 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5DA26AD6
+P 1800 2350
+F 0 "#PWR?" H 1800 2200 50  0001 C CNN
+F 1 "+12V" V 1815 2478 50  0000 L CNN
+F 2 "" H 1800 2350 50  0001 C CNN
+F 3 "" H 1800 2350 50  0001 C CNN
+	1    1800 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DA26C82
+P 1800 2950
+F 0 "#PWR?" H 1800 2700 50  0001 C CNN
+F 1 "GND" H 1805 2777 50  0000 C CNN
+F 2 "" H 1800 2950 50  0001 C CNN
+F 3 "" H 1800 2950 50  0001 C CNN
+	1    1800 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV1
+U 1 1 5DA276E7
+P 2600 3600
+F 0 "RV1" H 2530 3646 50  0000 R CNN
+F 1 "5000RTRIM" H 2530 3555 50  0000 R CNN
+F 2 "" H 2600 3600 50  0001 C CNN
+F 3 "~" H 2600 3600 50  0001 C CNN
+	1    2600 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5DA2778A
+P 2600 3450
+F 0 "#PWR?" H 2600 3300 50  0001 C CNN
+F 1 "+12V" V 2615 3578 50  0000 L CNN
+F 2 "" H 2600 3450 50  0001 C CNN
+F 3 "" H 2600 3450 50  0001 C CNN
+	1    2600 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DA279F6
+P 2600 3750
+F 0 "#PWR?" H 2600 3500 50  0001 C CNN
+F 1 "GND" H 2605 3577 50  0000 C CNN
+F 2 "" H 2600 3750 50  0001 C CNN
+F 3 "" H 2600 3750 50  0001 C CNN
+	1    2600 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 3100 3000 3100
+Wire Wire Line
+	3000 3100 3000 3600
+Wire Wire Line
+	3000 3600 2750 3600
+Wire Wire Line
+	3950 3000 4150 3000
+Wire Wire Line
+	6650 2300 7350 2300
+Wire Wire Line
+	7350 2300 7350 2400
+Connection ~ 7350 2300
+Wire Wire Line
+	7350 2300 7850 2300
+Wire Wire Line
+	7350 2800 7350 2900
+Connection ~ 7350 2800
+Wire Wire Line
+	6650 2800 7350 2800
+$Comp
+L power:+12V #PWR?
+U 1 1 5DA2B469
+P 5800 4000
+F 0 "#PWR?" H 5800 3850 50  0001 C CNN
+F 1 "+12V" V 5815 4128 50  0000 L CNN
+F 2 "" H 5800 4000 50  0001 C CNN
+F 3 "" H 5800 4000 50  0001 C CNN
+	1    5800 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DA2B46F
+P 5800 4300
+F 0 "#PWR?" H 5800 4050 50  0001 C CNN
+F 1 "GND" H 5805 4127 50  0000 C CNN
+F 2 "" H 5800 4300 50  0001 C CNN
+F 3 "" H 5800 4300 50  0001 C CNN
+	1    5800 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5DA2B818
+P 5800 4150
+F 0 "C2" H 5915 4196 50  0000 L CNN
+F 1 "100nF" H 5915 4105 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 5838 4000 50  0001 C CNN
+F 3 "~" H 5800 4150 50  0001 C CNN
+	1    5800 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D1
+U 1 1 5DA2C18D
+P 7350 2550
+F 0 "D1" V 7304 2629 50  0000 L CNN
+F 1 "1N4007" V 7395 2629 50  0000 L CNN
+F 2 "" H 7350 2550 50  0001 C CNN
+F 3 "~" H 7350 2550 50  0001 C CNN
+	1    7350 2550
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
